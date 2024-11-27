@@ -9,7 +9,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "3000:3000"
     volumes:
       - type: bind
         source: /pds/caddy/data
@@ -23,6 +22,8 @@ services:
     image: ghcr.io/bluesky-social/pds:0.4
     network_mode: host
     restart: unless-stopped
+    ports:
+      - "3000:3000"
     volumes:
       - type: bind
         source: /pds
