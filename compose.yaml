@@ -20,7 +20,6 @@ services:
   pds:
     container_name: pds
     image: ghcr.io/bluesky-social/pds:0.4
-    network_mode: host
     restart: unless-stopped
     ports:
       - "3000:3000"
